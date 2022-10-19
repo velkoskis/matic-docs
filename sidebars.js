@@ -682,14 +682,12 @@ module.exports = {
             {
               type: "link",
               label: "Polygon-Mainnet",
-              href:
-                "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
+              href: "https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json",
             },
             {
               type: "link",
               label: "Mumbai",
-              href:
-                "https://static.matic.network/network/testnet/mumbai/index.json",
+              href: "https://static.matic.network/network/testnet/mumbai/index.json",
             },
           ],
         },
@@ -867,30 +865,30 @@ module.exports = {
       type: "category",
       label: "zk Assembly",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
-      items:[
+      items: [
         "zkEVM/zkASM/introduction",
         "zkEVM/zkASM/basic-syntax",
-        "zkEVM/zkASM/some-examples"
-      ]
+        "zkEVM/zkASM/some-examples",
+      ],
     },
     {
       type: "category",
       label: "Polynomial Identity Language",
       link: {
-        type: "generated-index"
+        type: "generated-index",
       },
-      items:[
+      items: [
         "zkEVM/PIL/introduction",
         "zkEVM/PIL/hello-world-examples",
         "zkEVM/PIL/components",
         "zkEVM/PIL/cyclical-nature",
         "zkEVM/PIL/modularity",
         "zkEVM/PIL/advanced-features",
-      ]
+      ],
     },
-    "zkEVM/open-source-repos"
+    "zkEVM/open-source-repos",
   ],
 
   nightfall: [
@@ -940,7 +938,39 @@ module.exports = {
       items: [
         "nightfall/tools/nightfall-wallet",
         "nightfall/tools/explorer",
-        "nightfall/tools/nightfall-sdk",
+        {
+          type: "category",
+          label: "SDK",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "nightfall/tools/nightfall-sdk",
+
+            {
+              type: "category",
+              label: "User SDK",
+              link: {
+                type: "generated-index",
+              },
+              items: [
+                "nightfall/tools/user-sdk-getting-started",
+                "nightfall/tools/user-sdk-installation",
+                "nightfall/tools/user-sdk-api",
+                "nightfall/tools/user-sdk-examples",
+                "nightfall/tools/user-sdk-demo-app",
+              ],
+            },
+            {
+              type: "category",
+              label: "Proposer SDK",
+              link: {
+                type: "generated-index",
+              },
+              items: ["nightfall/tools/proposer-sdk-installation"],
+            },
+          ],
+        },
       ],
     },
     "nightfall/faq/faq",
