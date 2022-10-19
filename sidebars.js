@@ -39,6 +39,7 @@ module.exports = {
         "maintain/polygon-basics/who-is-delegator",
         "maintain/polygon-basics/who-is-validator",
         "home/architecture/polygon-architecture",
+        "home/polygon-basics/zkEVM-basics",
       ],
     },
     "home/faq",
@@ -464,7 +465,6 @@ module.exports = {
             "develop/ethereum-polygon/plasma/erc20",
             "develop/ethereum-polygon/plasma/erc721",
             "develop/ethereum-polygon/plasma/deposit-withdraw-event-plasma",
-            "develop/ethereum-polygon/plasma/mapping-assets",
             "develop/plasma-using-metamask",
           ],
         },
@@ -641,6 +641,14 @@ module.exports = {
             "maintain/validate/validator-staking-operations",
             "maintain/validate/validator-commission-operations",
           ],
+        },
+        {
+          type: "category",
+          label: "Validator Performance Metrics",
+          link: {
+            type: "generated-index",
+          },
+          items: ["maintain/validate/validator-performance-overview"],
         },
         "avail/node/avail-node-management",
         {
@@ -855,8 +863,118 @@ module.exports = {
     "avail/faq",
   ],
 
+  miden: [
+    {
+      type: "category",
+      label: "Introduction",
+      link: {
+        type: "doc",
+        id: "miden/intro/main",
+      },
+      items: [
+        "miden/intro/overview",
+        "miden/intro/usage",
+        "miden/intro/performance",
+      ],
+    },
+    {
+      type: "category",
+      label: "User Documentation",
+      link: {
+        type: "doc",
+        id: "miden/user_docs/main",
+      },
+      items: [
+        {
+          type: "category",
+          label: "Miden Assembly",
+          link: {
+            type: "doc",
+            id: "miden/user_docs/assembly/main",
+          },
+          items: [
+            "miden/user_docs/assembly/code_organization",
+            "miden/user_docs/assembly/flow_control",
+            "miden/user_docs/assembly/field_operations",
+            "miden/user_docs/assembly/u32_operations",
+            "miden/user_docs/assembly/stack_manipulation",
+            "miden/user_docs/assembly/io_operations",
+            "miden/user_docs/assembly/cryptographic_operations",
+          ],
+        },
+        {
+          type: "category",
+          label: "Miden Standard Library",
+          link: {
+            type: "doc",
+            id: "miden/user_docs/stdlib/main",
+          },
+          items: [
+            "miden/user_docs/stdlib/crypto/hashes",
+            "miden/user_docs/stdlib/math/u64",
+            "miden/user_docs/stdlib/sys",
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Design",
+      link: {
+        type: "doc",
+        id: "miden/design/main",
+      },
+      items: [
+        "miden/design/programs",
+        {
+          type: "category",
+          label: "Program decoder",
+          link: {
+            type: "doc",
+            id: "miden/design/decoder/main",
+          },
+          items: ["miden/design/decoder/constraints"],
+        },
+        {
+          type: "category",
+          label: "Operand stack",
+          link: {
+            type: "doc",
+            id: "miden/design/stack/main",
+          },
+          items: [
+            "miden/design/stack/op_constraints",
+            "miden/design/stack/system_ops",
+            "miden/design/stack/field_ops",
+            "miden/design/stack/u32_ops",
+            "miden/design/stack/stack_ops",
+            "miden/design/stack/io_ops",
+            "miden/design/stack/crypto_ops",
+          ],
+        },
+        "miden/design/range",
+        {
+          type: "category",
+          label: "Chiplets",
+          link: {
+            type: "doc",
+            id: "miden/design/chiplets/main",
+          },
+          items: [
+            "miden/design/chiplets/hasher",
+            "miden/design/chiplets/bitwise",
+            "miden/design/chiplets/memory",
+          ],
+        },
+        "miden/design/multiset",
+      ],
+    },
+    "miden/background",
+  ],
+
   zkEVM: [
     "zkEVM/overview",
+    "zkEVM/develop",
     "zkEVM/proof-of-efficiency",
     "zkEVM/zkNode",
     "zkEVM/Architecture/zkProver",
@@ -889,6 +1007,7 @@ module.exports = {
       ],
     },
     "zkEVM/open-source-repos",
+    "zkEVM/glossary",
   ],
 
   nightfall: [
@@ -1090,6 +1209,7 @@ module.exports = {
         "edge/additional-features/stress-testing",
         "edge/additional-features/blockscout",
         "edge/additional-features/permission-contract-deployment",
+        "edge/additional-features/predeployment",
       ],
     },
     {
@@ -1171,5 +1291,76 @@ module.exports = {
       ],
     },
     "edge/troubleshooting",
+  ],
+
+  polygonid: [
+    "polygonid/overview",
+    {
+      type: "category",
+      label: "Issuer",
+      link: {
+        type: "generated-index",
+      },
+      items: ["polygonid/issuer/issuer-overview"],
+    },
+    {
+      type: "category",
+      label: "Verifier",
+      link: {
+        type: "generated-index",
+      },
+      items: [
+        "polygonid/verifier/verifier-overview",
+        {
+          type: "category",
+          label: "Off-chain verification",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "polygonid/verifier/verification-library/verifier-library-intro",
+            {
+              type: "category",
+              label: "APIs",
+              link: {
+                type: "generated-index",
+              },
+              items: [
+                "polygonid/verifier/verification-library/config",
+                "polygonid/verifier/verification-library/request-api-guide",
+                "polygonid/verifier/verification-library/verification-api-guide",
+                "polygonid/verifier/verification-library/zk-query-language",
+                "polygonid/verifier/verification-library/jwz",
+              ],
+            },
+            "polygonid/verifier/verification-library/verifier-set-up",
+          ],
+        },
+        {
+          type: "category",
+          label: "On-chain verification",
+          link: {
+            type: "generated-index",
+          },
+          items: ["polygonid/verifier/on-chain-verification/overview"],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Wallet",
+      link: {
+        type: "generated-index",
+      },
+      items: ["polygonid/wallet/wallet-overview"],
+    },
+    {
+      type: "category",
+      label: "Smart Contracts",
+      link: {
+        type: "generated-index",
+      },
+      items: ["polygonid/contracts/overview"],
+    },
   ],
 };

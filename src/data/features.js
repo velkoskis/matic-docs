@@ -90,7 +90,7 @@ export const secondRow = [
     {
         title: "Miden",
         status: "STARK-based ZK Rollup: Docs Coming Soon",
-        linkUrl: "",
+        linkUrl: "docs/miden/intro/main",
         imageUrl: "img/miden.svg",
         description: "A STARK-based zk-rollup solution that supports arbitrary smart contracts"
     },
@@ -104,7 +104,7 @@ export const secondRow = [
     {
         title: "ID",
         status: "Privacy: Docs Coming Soon",
-        linkUrl: "",
+        linkUrl: "docs/polygonid/overview",
         imageUrl: "img/polygon-id.svg",
         description: "A blockchain-native identity and authentication solution"
     },
