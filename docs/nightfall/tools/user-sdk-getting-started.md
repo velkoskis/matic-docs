@@ -69,6 +69,15 @@ BLOCKCHAIN_URL=your web3 url provider to access the blockchain
 
 Polygon Nightfall has been thoroughly tested on `ganache` and `goerli`. On Goerli we provide most of the infrastructure required to run Nightfall, except for the client.
 
+
+By running Nightfall on Ganache, a set of Mock contracts are being deployed. On Goerli they have already been deployed.
+Below are the address of the deployed Mock contracts that can be used for testing purposes.
+
+| Standard | Ganache | Goerli |
+| --- | --- | --- |
+| ERC20 | 0xa8473bEF03cBE50229a39718CBDC1fdee2F26b1a | 0x499d11E0b6eAC7c0593d8Fb292DCBbF815Fb29Ae |
+| ERC721 | 0x00269d82110435a4e7043d53e5bf79a8bd767b17 | 0x8a80Fc213366173804151869aAacC74DD29C4783 |
+| ERC1155 | 0x6aB1cbC48f5D58ed60D547976555D0786539E7CE | 0x045ba0f2D8D77B8aF7c63E3dB3bdA5c3dA770A64 |
 #### 2Tx rule
 
 **Applies to Nightfall Protocol on Ganache**
