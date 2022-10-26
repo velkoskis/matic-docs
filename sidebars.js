@@ -1083,7 +1083,6 @@ module.exports = {
                 "nightfall/tools/user-sdk-installation",
                 "nightfall/tools/user-sdk-api",
                 "nightfall/tools/user-sdk-examples",
-                "nightfall/tools/user-sdk-demo-app",
               ],
             },
             {

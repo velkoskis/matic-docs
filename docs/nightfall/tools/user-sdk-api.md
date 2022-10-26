@@ -18,14 +18,14 @@ The User API serves as an interface that allows for easy interaction with the Ni
 Creates an instance of user.
 A User can be created with an existing Nightfall mnemonic or without a mnemonic in which case a new mnemonic is generated.
 
-##### Creating an User via Metamask
+##### Creating a User via Metamask
 
     const nightfallUser = await UserFactory.create({
       clientApiUrl,
       nightfallMnemonic?
     });
 
-##### Creating an User via a private key
+##### Creating a User via a private key
 
     user = await UserFactory.create({
       blockchainWsUrl,
@@ -36,13 +36,13 @@ A User can be created with an existing Nightfall mnemonic or without a mnemonic 
 
 #### user.close
 
-Every instance of an User creates an open WebSocket connection. Using the `close` method destroys the running instance and closes the connection.
+Every instance of a User creates an open WebSocket connection. Using the `close` method destroys the running instance and closes the connection.
 
     user.close();
 
 ### user.makeDeposit
 
-Deposits a Layer 1 token on Nightfall Layer 2
+Deposits a Layer 1 token on Nightfall Layer 2.
 
 #### Depositing an ERC20 Token
 
@@ -62,7 +62,7 @@ Deposits a Layer 1 token on Nightfall Layer 2
 
 ### user.checkNightfallBalances
 
-Get the total Nightfall Layer2 balance once the deposit have been processed by the Protocol.(link)
+Get the total Nightfall Layer2 balance once the deposit have been processed by the Protocol.
 
      balances = await user.checkNightfallBalances();
 
@@ -70,7 +70,7 @@ Get the total Nightfall Layer2 balance once the deposit have been processed by t
 
 Transfers tokens on Layer 2 between users.
 
-User [must have balance](https://wiki.polygon.technology/docs/nightfall/tools/user-sdk-getting-started#available-networks) on Layer2 to create a transfer.
+User [must have balance](/docs/nightfall/tools/user-sdk-getting-started#available-networks) on Layer2 to create a transfer.
 
 #### Transferring an ERC20 Token
 
@@ -107,53 +107,55 @@ Withdraws a token from Layer 2 back to Layer 1. It can then be withdrawn from th
 
 ### user.finaliseWithdrawal
 
-Allow user to finalise a previously initiated withdrawal and with the given transaction hash
+Allows user to finalise a previously initiated withdrawal and with the given transaction hash.
 
     const txReceipt = await user.finaliseWithdrawal({ withdrawTxHashL2 });
 
 ### user.checkStatus
 
-Check client API availability and blockchain websocket connection
+Checks client API availability and blockchain websocket connection.
 
     status = await user.checkStatus();
 
 ### user.getNightfallMnemonic
 
-Get the Nightfall Mnemonic - Keep this private
+Gets the Nightfall Mnemonic - Keep this private.  
 
     mnemonic = user.getNightfallMnemonic();
 
 ### user.getNightfallAddress
 
-Get the Nightfall Layer2 address
+Gets the Nightfall Layer 2 address.
 
     nightfallAddress = nightfallUserRecepient.getNightfallAddress()
 
 ### user.updateEthAccountFromMetamask
 
+Updates Eth account form Metamask.
+
     updatedAccount = await user.updateEthAccountFromMetamask()
 
 ### user.checkPendingDeposits
 
-Check the deposits that haven't been processed yet
+Checks the deposits that haven't been processed yet.
 
     pendingDeposits = await user.checkPendingDeposits()
 
 ### user.checkNightfallBalances
 
-Check the balances for Nightfall
+Checks the balances for Nightfall.
 
      balances = await user.checkNightfallBalances();
 
 ### user.checkPendingTransfers
 
-Check the balance of the pending spent commitments on Layer2
+Checks the balance of the pending spent commitments on Layer 2.
 
     pendingTransfers = await user.checkPendingTransfers()
 
 ### user.exportCommitments
 
-Export user [commitments](https://wiki.polygon.technology/docs/nightfall/protocol/commitments)
+Export user [commitments](/docs/nightfall/protocol/commitments)
 
      export = await user.exportCommitments({
         listOfCompressedZkpPublicKey,
@@ -163,7 +165,7 @@ Export user [commitments](https://wiki.polygon.technology/docs/nightfall/protoco
 
 ### user.importAndSaveCommitments
 
-Import user [commitments](https://wiki.polygon.technology/docs/nightfall/protocol/commitments)
+Import user [commitments](/docs/nightfall/protocol/commitments)
 
     imports = await user.importAndSaveCommitments({
       pathToImport,

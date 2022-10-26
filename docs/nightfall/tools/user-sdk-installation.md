@@ -13,8 +13,7 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 ## Install SDK from NPM
 
-With a client setup
-Add the Nightfall SDK as a dependency to your project
+With a client set up, add the Nightfall SDK as a dependency to your project:
 
 ```bash
 npm install nightfall-sdk
@@ -31,6 +30,5 @@ user = await UserFactory.create(userOptions);
 const txReceipts = await user.makeDeposit(depositOptions);
 ```
 
-_Where userOptions is of type UserFactoryCreate and depositOptions UserMakeDeposit_.
-
-Check out the [example scripts](#example-scripts) for a better understanding on how to use the SDK to capacity.
+Where _userOptions_ is of type _UserFactoryCreate_ and _depositOptions_ _UserMakeDeposit_.
+Check out the [example scripts](https://github.com/maticnetwork/nightfall-sdk#example-scripts) for a better understanding on how to use the SDK to capacity.
