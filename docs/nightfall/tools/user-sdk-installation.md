@@ -30,5 +30,5 @@ user = await UserFactory.create(userOptions);
 const txReceipts = await user.makeDeposit(depositOptions);
 ```
 
-Where _userOptions_ is of type _UserFactoryCreate_ and _depositOptions_ _UserMakeDeposit_.
+Where _userOptions_ is of type _UserFactoryCreate_ and _depositOptions_ _UserMakeDeposit_. <br></br>
 Check out the [example scripts](https://github.com/maticnetwork/nightfall-sdk#example-scripts) for a better understanding on how to use the SDK to capacity.

@@ -19,7 +19,7 @@ The Nightfall Client is a key part of the architecture. It generates zero-knowle
 
 ### Set up a Client locally (Ganache)
 
-To use the SDK locally, set up and run the entire Nightfall project. The Client is part of this set up and by running the Project you are running the Client too.
+To use the SDK locally, set up and run the entire Nightfall project. The Client is part of this setup and by running the Project you are running the Client too.
 
 You will also need a running proposer, therefore you should use two terminals, one for running Nightfall and one for the Proposer.
 
@@ -55,7 +55,7 @@ Rename `client-example.env` to `.client.env` and update the contents as followin
 
 ```
 ETH_NETWORK=goerli
-BLOCKCHAIN_URL=your web3 url provider to access the blockchain
+BLOCKCHAIN_URL= <your web3 url provider to access the blockchain>
 ```
 
 **Run Client**
@@ -67,11 +67,11 @@ cd nightfall_3/nightfall-client
 
 ## Available networks
 
-Polygon Nightfall has been thoroughly tested on `ganache` and `goerli`. On Goerli we provide most of the infrastructure required to run Nightfall, except for the client.
+Polygon Nightfall has been thoroughly tested on Ganache` and Goerli. On Goerli we provide most of the infrastructure required to run Nightfall, except for the Client.
 
 
 By running Nightfall on Ganache, a set of Mock contracts are being deployed. On Goerli they have already been deployed.
-Below are the address of the deployed Mock contracts that can be used for testing purposes.
+Below are the addresses of the deployed Mock contracts that can be used for testing purposes.
 
 | Standard | Ganache | Goerli |
 | --- | --- | --- |
